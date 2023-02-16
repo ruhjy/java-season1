@@ -1,4 +1,4 @@
-package ch15_1.sec03.exam01;
+package ch15_1.sec03.exam02;
 
 import java.util.Objects;
 
@@ -24,6 +24,11 @@ public class Member {
 		} else {
 			return false;
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Member [name=" + name + ", age=" + age + "]";
 	}
 
 }
