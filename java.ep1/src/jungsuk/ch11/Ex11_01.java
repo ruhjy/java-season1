@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
-public class Ex11_1 {
+public class Ex11_01 {
 	public static void main(String[] args) {
 
 		ArrayList list1 = new ArrayList();

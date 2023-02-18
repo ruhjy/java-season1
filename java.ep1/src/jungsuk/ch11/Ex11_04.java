@@ -5,7 +5,7 @@ import java.util.ListIterator;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Ex11_4 {
+public class Ex11_04 {
 	static Queue q = new LinkedList();
 	static final int MAX_SIZE = 5;
 

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class Ex11_2 {
+public class Ex11_02 {
 	public static void main(String[] args) {
 		
 		Stack st = new Stack();

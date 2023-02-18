@@ -3,7 +3,7 @@ package jungsuk.ch11;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-public class Ex11_3 {
+public class Ex11_03 {
 	public static void main(String[] args) {
 		if (args.length != 1) {
 			System.out.println("Usage:java Ex11_3 \"EXPRESSION\"");
