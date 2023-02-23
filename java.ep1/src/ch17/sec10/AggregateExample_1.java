@@ -73,5 +73,11 @@ public class AggregateExample_1 {
 		Integer[] arr3 = Arrays.stream(arr2).boxed().toArray(Integer[]::new);
 		Arrays.sort(arr3, Collections.reverseOrder());
 		System.out.println(Arrays.toString(arr3));
+		
+		Stream<int[]> intStream = Stream.of(arr2);
+		
+		intStream.sorted((s1,s2) -> s2.compareTo(s1))
+				.forEach(n -> System.out.print(n + " "));
+		
 	}
 }
