@@ -23,7 +23,7 @@ public class Logintest111 {
 
 			switch (input) {
 			case "1" -> {
-				singIn(map, scan);
+				signIn(map, scan);
 			}
 			case "2" -> {
 				login(map, scan);
@@ -68,7 +68,7 @@ public class Logintest111 {
 //				System.out.println("회원가입해라");
 	}
 
-	public static void singIn(Map<String, String> map, Scanner scan) {
+	public static void signIn(Map<String, String> map, Scanner scan) {
 		String id;
 		String pwd;
 		System.out.println("아이디를 입력해주세요.4~10");
