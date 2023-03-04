@@ -6,8 +6,12 @@ import home.core.order.*;
 public class OrderApp {
 	public static void main(String[] args) {
 
-		MemberService memberService = new MemberServiceImpl();
-		OrderService orderService = new OrderServiceImpl();
+//		MemberService memberService = new MemberServiceImpl();
+//		OrderService orderService = new OrderServiceImpl();
+		
+		AppConfig appConfig = new AppConfig();
+		MemberService memberService = appConfig.memberService();
+		OrderService orderService = appConfig.orderService();
 
 		Long MemberId1 = 1L;
 		Long MemberId2 = 2L;

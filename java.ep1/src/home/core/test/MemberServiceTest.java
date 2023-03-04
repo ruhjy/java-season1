@@ -4,11 +4,19 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
+import home.core.*;
 import home.core.member.*;
 
 class MemberServiceTest {
 	
-	MemberService memberService = new MemberServiceImpl();
+	MemberService memberService;
+	
+	@BeforeEach
+	void beforeEach() {
+		
+		AppConfig appConfig = new AppConfig();
+		memberService = appConfig.memberService();
+	}
 
 	@Test
 	void join() {

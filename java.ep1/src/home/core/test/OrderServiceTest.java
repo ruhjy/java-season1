@@ -4,14 +4,23 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.*;
 
+import home.core.*;
 import home.core.member.*;
 import home.core.order.*;
 import home.core.order.Order;
 
 class OrderServiceTest {
 
-	OrderService orderService = new OrderServiceImpl();
-	MemberService memberService = new MemberServiceImpl();
+	OrderService orderService;
+	MemberService memberService;
+	
+	@BeforeEach
+	void beforeEach() {
+		
+		AppConfig appConfig = new AppConfig();
+		memberService = appConfig.memberService();
+		orderService = appConfig.orderService();
+	}
 
 	@Test
 	void createOrderBasic() {
