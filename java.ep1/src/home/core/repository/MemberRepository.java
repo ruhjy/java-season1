@@ -1,4 +1,6 @@
-package home.core.member;
+package home.core.repository;
+
+import home.core.member.*;
 
 public interface MemberRepository {
 	

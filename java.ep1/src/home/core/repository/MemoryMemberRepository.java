@@ -1,11 +1,13 @@
-package home.core.member;
+package home.core.repository;
 
 import java.util.*;
+
+import home.core.member.*;
 
 public class MemoryMemberRepository implements MemberRepository {
 
 	private static Map<Long, Member> store = new HashMap<>();
-	
+
 	@Override
 	public void save(Member member) {
 		store.put(member.getId(), member);

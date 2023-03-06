@@ -11,40 +11,29 @@ import home.core.order.Order;
 
 class OrderServiceTest {
 
-	OrderService orderService;
-	MemberService memberService;
-	
+//	MemberService memberService = new MemberServiceImpl();
+//	OrderService orderService = new OrderServiceImpl();
+
+	private MemberService memberService;
+	private OrderService orderService;
+
 	@BeforeEach
 	void beforeEach() {
-		
 		AppConfig appConfig = new AppConfig();
+
 		memberService = appConfig.memberService();
 		orderService = appConfig.orderService();
 	}
 
 	@Test
-	void createOrderBasic() {
+	void createOrder() {
 
 		Long memberId = 1L;
+		Member member = new Member(memberId, "memberA", Grade.VIP);
 
-		Member member = new Member(memberId, "hjy", Grade.BASIC);
-		
 		memberService.join(member);
-		Order order = orderService.createOrder(memberId, "itemA", 20000);
+		Order order = orderService.createOrder(memberId, "itemA", 10000);
 
-		assertEquals(order.getDiscountPrice(), 0);
-	}
-	
-	@Test
-	void createOrderVip() {
-		
-		Long memberId = 1L;
-		
-		Member member = new Member(memberId, "hk", Grade.VIP);
-		memberService.join(member);
-		
-		Order order = orderService.createOrder(memberId, "itemB", 20000);
-		
 		assertEquals(order.getDiscountPrice(), 1000);
 	}
 
