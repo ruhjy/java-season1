@@ -16,15 +16,22 @@ public class Stream004 {
 
 		Set<String> set2 = list.stream().map(Student::getName)
 				.collect(Collectors.toSet());
-		
-		for(String s : set2) {
+
+		for (String s : set2) {
 			System.out.println(s);
 		}
 		System.out.println();
-		
+
 		Iterator it = set2.iterator();
 		while (it.hasNext()) {
-			String string = (String)it.next();
+			String string = (String) it.next();
+			System.out.println(string);
+		}
+		System.out.println();
+		
+		Iterator<String> it2 = set2.iterator();
+		while (it2.hasNext()) {
+			String string = it2.next();
 			System.out.println(string);
 		}
 	}
