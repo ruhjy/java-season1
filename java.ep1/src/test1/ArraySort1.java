@@ -9,6 +9,8 @@ public class ArraySort1 {
 		System.out.println(Arrays.toString(intArr));
 		Arrays.sort(intArr);
 		System.out.println(Arrays.toString(intArr));
+		
+		System.out.println((15 - 1) / 10 * 10 + 1);
 
 	}
 }
